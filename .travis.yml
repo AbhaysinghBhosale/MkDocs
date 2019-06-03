@@ -15,6 +15,7 @@ before_deploy:
 deploy: # Deploy documentation to Github in the gh_pages branch
     provider: pages
     skip_cleanup: true
+    github_token: 07bbc5bb552a000a85f164e6e5d32ff8bbdb6495
     local_dir: site
     on:
         branch: master
