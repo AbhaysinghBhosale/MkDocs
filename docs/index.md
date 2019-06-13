@@ -4,7 +4,7 @@ For full documentation visit [mkdocs.org](https://mkdocs.org).
 
 ## Commands
 
-* `mkdocs new [dir-name]` - Create a your documentation.
+* `mkdocs new [dir-name]` - Create a your documentation,deploy to azure.
 * `mkdocs serve` - Start the live-reloading docs server.
 * `mkdocs build` - Build the documentation site.
 * `mkdocs help` - Print this help message.
