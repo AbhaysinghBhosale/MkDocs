@@ -2,7 +2,17 @@ language: python # Set the build language to Python
 
 python: 3.6 # Set the version of Python to use
 
-branches: master # Set the branch to build from
+# Set the branch to build from
+branches:
+  except:
+  - dev
+  - gh-pages
+
+# safelist
+branches:
+  only:
+  - master
+  - staging
 
 install:
     - pip install mkdocs mkdocs-material pymdown-extensions pygments # Install the required dependencies
@@ -17,5 +27,11 @@ deploy: # Deploy documentation to Github in the gh_pages branch
     skip_cleanup: true
     github_token: $github_token
     local_dir: site
+    on:
+        branch: staging
+    provider: s3
+    access_key_id: $AWS_ACCESS_KEY_ID
+    secret_access_key: $AWS_SECRET_ACCESS_KEY
+    bucket: "www.docs.cloudneeti.com"
     on:
         branch: master
