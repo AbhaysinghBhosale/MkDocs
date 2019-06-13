@@ -35,6 +35,7 @@ deploy: # Deploy documentation to Github in the gh_pages branch
     secret_access_key: $AWS_SECRET_ACCESS_KEY
     bucket: $S3_BUCKET
     region: $AWS_DEFAULT_REGION
+    local_dir: site
     on:
         branch: master
         
