@@ -30,6 +30,7 @@ deploy: # Deploy documentation to Github in the gh_pages branch
     on:
         branch: staging
   - provider: azure_web_apps
+    verbose: true
     skip_cleanup: true
     username: $AZURE_DEPLOYMENT_USER       # If AZURE_WA_USERNAME isn't set
     password: $AZURE_DEPLOYMENT_PASSWORD    # If AZURE_WA_PASSWORD isn't set
