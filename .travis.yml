@@ -30,8 +30,11 @@ deploy: # Deploy documentation to Github in the gh_pages branch
     on:
         branch: staging
     provider: s3
+    skip_cleanup: true
     access_key_id: $AWS_ACCESS_KEY_ID
     secret_access_key: $AWS_SECRET_ACCESS_KEY
     bucket: "www.docs.cloudneeti.com"
+    region: "Bucket region"
     on:
         branch: master
+        
